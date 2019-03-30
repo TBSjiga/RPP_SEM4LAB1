@@ -30,8 +30,8 @@ public class Adapter extends android.support.v7.widget.RecyclerView.Adapter<Adap
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         String color = ((i + 1) % 2 == 0) ? "#cccccc" : "#ffffff";
         viewHolder.itemLayoutView.setBackgroundColor(Color.parseColor(color));
-        TextView textView = (TextView) viewHolder.itemLayoutView.findViewById(R.id.text);
-        textView.setText(convertNumWord.getNumber(i + 1));
+        TextView textView = (TextView) viewHolder.itemLayoutView.findViewById(R.id.text); // Находим число по id
+        textView.setText(convertNumWord.getNumber(i + 1)); // Конвертация числа в текст
     }
 
     @Override
